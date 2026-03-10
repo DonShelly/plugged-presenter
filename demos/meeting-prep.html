@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meeting Prep Flow</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+        background:
+          radial-gradient(860px circle at 8% -12%, rgba(120, 95, 255, 0.32), transparent 46%),
+          radial-gradient(780px circle at 95% 115%, rgba(54, 186, 255, 0.2), transparent 50%),
+          linear-gradient(160deg, #0d1733 0%, #0a152b 100%);
+        color: #edf3ff;
+      }
+      .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 28px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 34px;
+      }
+      p {
+        margin: 0 0 20px;
+        color: #b0c5ef;
+      }
+      .timeline {
+        display: grid;
+        gap: 12px;
+      }
+      .step {
+        background: rgba(23, 35, 67, 0.9);
+        border: 1px solid rgba(126, 168, 255, 0.32);
+        border-radius: 14px;
+        padding: 14px;
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        gap: 12px;
+        align-items: start;
+      }
+      .time {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #a6ecff;
+        font-weight: 700;
+        background: rgba(45, 190, 255, 0.16);
+        border: 1px solid rgba(45, 190, 255, 0.33);
+        border-radius: 999px;
+        padding: 6px 10px;
+        display: inline-block;
+      }
+      .step h3 {
+        margin: 0 0 6px;
+        font-size: 17px;
+      }
+      ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 14px;
+        line-height: 1.45;
+        color: #c0d3f6;
+      }
+      .output {
+        margin-top: 16px;
+        background: rgba(20, 31, 59, 0.9);
+        border: 1px solid rgba(126, 168, 255, 0.32);
+        border-radius: 14px;
+        padding: 14px;
+      }
+      .output h3 {
+        margin-top: 0;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        background: rgba(42, 214, 190, 0.14);
+        border: 1px solid rgba(42, 214, 190, 0.35);
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 12px;
+        color: #9cf0e3;
+      }
+      @media (max-width: 900px) {
+        .step {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>OpenClaw Workflow: Meeting Prep</h1>
+      <p>
+        Calendar event appears. OpenClaw assembles a pre-meeting briefing pack automatically.
+      </p>
+
+      <div class="timeline">
+        <div class="step">
+          <div class="time">T-24h</div>
+          <div>
+            <h3>Event detected</h3>
+            <ul>
+              <li>Calendar sync identifies upcoming meeting</li>
+              <li>Contact/company extracted</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="time">T-12h</div>
+          <div>
+            <h3>Context pull</h3>
+            <ul>
+              <li>Last conversation notes</li>
+              <li>CRM status + account history</li>
+              <li>LinkedIn signal scan</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="time">T-2h</div>
+          <div>
+            <h3>Brief generated</h3>
+            <ul>
+              <li>Meeting objective + desired outcome</li>
+              <li>Talking points + tailored questions</li>
+              <li>Risks/opportunities snapshot</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="output">
+        <h3>Founder receives briefing</h3>
+        <div class="chips">
+          <span class="chip">1-page summary</span>
+          <span class="chip">Questions to ask</span>
+          <span class="chip">Relationship history</span>
+          <span class="chip">Follow-up template</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

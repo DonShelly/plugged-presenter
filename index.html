@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plugged Workshop Deck</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="rail-hotzone" id="railHotzone" aria-hidden="true"></div>
+      <aside class="rail" id="rail">
+        <div class="rail-header">Sections</div>
+        <div class="rail-list" id="railList"></div>
+      </aside>
+
+      <main class="stage">
+        <header class="topbar">
+          <div class="brand">PLUGGED · Workshop</div>
+          <div class="meta" id="slideCount"></div>
+        </header>
+
+        <section class="canvas-shell">
+          <div class="canvas-frame">
+            <iframe
+              id="canvas"
+              title="Presentation Canvas"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            ></iframe>
+            <div class="canvas-html" id="canvasHtml" aria-live="polite"></div>
+            <div class="canvas-fallback" id="canvasFallback" aria-live="polite">
+              <div class="fallback-card">
+                <div class="fallback-title" id="fallbackTitle"></div>
+                <div class="fallback-desc" id="fallbackDesc"></div>
+                <div class="fallback-actions">
+                  <button class="btn" id="fallbackOpen">Open site</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="controls">
+          <div class="controls-left">
+            <button class="btn" id="prevBtn">Prev</button>
+            <button class="btn" id="nextBtn">Next</button>
+          </div>
+          <div class="controls-center">
+            <div class="slide-title" id="slideTitle"></div>
+            <div class="slide-desc" id="slideDesc"></div>
+          </div>
+          <div class="controls-right">
+            <button class="btn btn-ghost" id="reloadBtn">Reload</button>
+            <button class="btn btn-ghost" id="openBtn">Open</button>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

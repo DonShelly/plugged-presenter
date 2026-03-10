@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Repurposing Flow</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+        background:
+          radial-gradient(900px circle at 10% -10%, rgba(139, 112, 255, 0.28), transparent 48%),
+          radial-gradient(850px circle at 100% 120%, rgba(36, 214, 189, 0.2), transparent 52%),
+          linear-gradient(155deg, #0e1731 0%, #0a142b 100%);
+        color: #edf3ff;
+      }
+      .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 28px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 34px;
+      }
+      p {
+        margin: 0 0 20px;
+        color: #b2c6ee;
+      }
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .card {
+        background: rgba(24, 36, 69, 0.9);
+        border: 1px solid rgba(141, 173, 255, 0.32);
+        border-radius: 14px;
+        padding: 14px;
+      }
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        color: #f1f6ff;
+      }
+      .badge {
+        display: inline-block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #abf4e8;
+        background: rgba(42, 214, 190, 0.16);
+        border: 1px solid rgba(42, 214, 190, 0.35);
+        border-radius: 999px;
+        padding: 3px 8px;
+        margin-bottom: 8px;
+      }
+      ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 14px;
+        line-height: 1.45;
+        color: #c2d5f6;
+      }
+      .sample {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .sample .card {
+        background: rgba(20, 31, 59, 0.86);
+      }
+      .sample .card p {
+        margin: 0;
+        color: #9fb5e2;
+      }
+      @media (max-width: 900px) {
+        .flow,
+        .sample {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>OpenClaw Workflow: Content Repurposing</h1>
+      <p>
+        Founder writes once in Notion. OpenClaw turns it into channel-ready drafts in minutes.
+      </p>
+
+      <div class="flow">
+        <div class="card">
+          <div class="badge">Trigger</div>
+          <h3>1) New Notion item</h3>
+          <ul>
+            <li>Status changes to "Ready to repurpose"</li>
+            <li>OpenClaw cron picks it up</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="badge">Transform</div>
+          <h3>2) Platform adaptation</h3>
+          <ul>
+            <li>Extract core message + CTA</li>
+            <li>Tailor tone per platform</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="badge">Review</div>
+          <h3>3) Approval gate</h3>
+          <ul>
+            <li>Drafts sent to founder in Telegram</li>
+            <li>Approve/edit per channel</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="badge">Publish</div>
+          <h3>4) Distribution + logging</h3>
+          <ul>
+            <li>Post to selected channels</li>
+            <li>Store output + metrics for reuse</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sample">
+        <div class="card"><h3>LinkedIn draft</h3><p>Story + authority + CTA</p></div>
+        <div class="card"><h3>X thread draft</h3><p>Punchy, concise, multi-tweet format</p></div>
+        <div class="card"><h3>Newsletter blurb</h3><p>Summary + one clear linkout</p></div>
+      </div>
+    </div>
+  </body>
+</html>
